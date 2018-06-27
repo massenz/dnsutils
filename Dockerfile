@@ -1,2 +1,8 @@
-FROM ubuntu:trusty
-RUN apt-get update && apt-get install -yq dnsutils && apt-get clean && rm -rf /var/lib/apt/lists
+# DNS Utilities augmented with curl.
+
+FROM ubuntu:bionic
+MAINTAINER Marco Massenzio (marco@alertavert.com)
+
+
+RUN apt-get update && apt-get install -yq dnsutils curl && \
+    apt-get clean && rm -rf /var/lib/apt/lists
