@@ -1,12 +1,11 @@
 # DNS Utilities augmented with curl.
 #
-# Derived from tutum/dnsutils and autmented with
+# Derived from tutum/dnsutils and augmented with
 # various networking utilities.
 
-FROM ubuntu:bionic
+FROM debian:stable-slim
 MAINTAINER Marco Massenzio (marco@alertavert.com)
 
-
-RUN apt-get update && \
-    apt-get install -yq dnsutils curl iputils-ping wget netcat && \
-    apt-get clean && rm -rf /var/lib/apt/lists
+RUN apt update && \
+    apt install -yq dnsutils curl iputils-ping wget netcat httpie && \
+    apt clean && rm -rf /var/lib/apt/lists
