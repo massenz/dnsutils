@@ -7,5 +7,6 @@ FROM debian:stable-slim
 MAINTAINER Marco Massenzio (marco@alertavert.com)
 
 RUN apt update && \
-    apt install -yq dnsutils curl iputils-ping wget netcat httpie && \
+    apt install -yq dnsutils curl iputils-ping wget \
+        netcat httpie net-tools && \
     apt clean && rm -rf /var/lib/apt/lists
