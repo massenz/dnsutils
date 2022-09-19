@@ -4,7 +4,7 @@
 # various networking utilities.
 
 FROM debian:stable-slim
-MAINTAINER Marco Massenzio (marco@alertavert.com)
+LABEL org.opencontainers.image.authors="Marco Massenzio (marco@alertavert.com)"
 
 RUN apt update && \
     apt install -yq dnsutils curl iputils-ping wget \
