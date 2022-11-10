@@ -1,13 +1,11 @@
 # Network tools for Containers
 
-![Version](https://img.shields.io/badge/Version-2.2.0-blue)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
-![OS Debian](https://img.shields.io/badge/OS-Debian-green)
 
+[![Release](https://github.com/massenz/dnsutils/actions/workflows/release.yaml/badge.svg)](https://github.com/massenz/dnsutils/actions/workflows/release.yaml)
 
 Docker image with network utilites installed.
 (derived from [`tutum/dnsutils`](https://hub.docker.com/r/tutum/dnsutils))
-
 
 ## Usage
 
@@ -15,7 +13,7 @@ This is useful when debugging services running in Docker or Kubernetes and which
 
 You can confirm reachability and name resolution with something like:
 
-    docker run -it massenz/dnsutils:$VERSION nslookup myservice
+    docker run massenz/dnsutils:$VERSION nslookup myservice
 
 and test a server's response with:
 
@@ -27,4 +25,9 @@ Use the image with the additional utilities installed:
 
     docker run massenz/dnsutils:$VERSION curl -fs http://google.com
 
-`curl`, `wget`, `ping`, `http` and `nc` (netcat) are available.
+`curl`, `wget`, `ping`, `http` and `nc` (netcat) are available, as well as `vim` if you need to edit files (e.g., to POST using the `@` notation).
+
+## Build & Release
+
+This container maintains its version in `manifest.json` and gets automatically built and pushed to Docker Hub upon a merge to the `release` branch using Github Actions (courtesy of the [Common Utilities](https://github.com/massenz/common-utils)).
+
