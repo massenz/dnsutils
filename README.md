@@ -2,10 +2,10 @@
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
+[![Release](https://github.com/massenz/dnsutils/actions/workflows/release.yaml/badge.svg)](https://github.com/massenz/dnsutils/actions/workflows/release.yaml)
 
 Docker image with network utilites installed.
 (derived from [`tutum/dnsutils`](https://hub.docker.com/r/tutum/dnsutils))
-
 
 ## Usage
 

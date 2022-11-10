@@ -1,5 +1,5 @@
 {
-  "version" : "2.3.0",
+  "version" : "2.3.1",
   "metadata": {
     "author": "marco@alertavert.com",
       "comment": "Docker image with network utilites"

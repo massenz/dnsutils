@@ -10,7 +10,7 @@ name: Release
 on:
   push:
     branches:
-      - add-vim
+      - release
 env:
   AUTHOR: ${{ github.event.pusher.name }}
   EMAIL: ${{ github.event.pusher.email }}
